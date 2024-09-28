@@ -18,7 +18,7 @@ authors:
 # - "Equal contribution"
 
 date: "2024-12-03T00:00:00Z"
-#doi: "10.1109/TVCG.2024.3360521"
+doi: "10.1109/TVCG.2024.3360521"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: "2024-12-13T00:00:00Z"
