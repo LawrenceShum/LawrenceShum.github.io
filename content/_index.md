@@ -13,11 +13,14 @@ sections:
       biography:
         style: 'text-align: justify; font-size: 0.8em;'
   - block: collection
+    id: papers
     content:
+      title: Publication
       filters:
         folders:
           - blog
+        featured_only: true
     design:
-      spacing:
-        padding: ['3rem', 0, '6rem', 0]
+      view: compact
+      columes: 1
 ---
