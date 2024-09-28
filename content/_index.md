@@ -18,9 +18,7 @@ sections:
       title: Publication
       filters:
         folders:
-          - blog
-        featured_only: true
+          - publication
     design:
-      view: compact
-      columes: 1
+      view: citation
 ---

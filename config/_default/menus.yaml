@@ -6,8 +6,6 @@ main:
     url: /
     weight: 10
   - name: Topics
-    url: tags/
+    url: /#papers
     weight: 20
-  - name: Uses
-    url: uses/
-    weight: 30
+
