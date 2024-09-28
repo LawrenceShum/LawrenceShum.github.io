@@ -11,7 +11,7 @@ last_name: Cen
 
 # Status emoji
 status:
-  icon: 🎓💻
+  icon: 💻
 
 # Is this the primary user of the site?
 superuser: true
@@ -33,7 +33,7 @@ profiles:
   - icon: at-symbol
     url: 'ruihongcen11@gmail.com'
     label: E-mail Me
-  - icon: github
+  - icon: brands/github
     url: https://github.com/LawrenceShum
   #- icon: brands/x
   #  url: https://twitter.com/GetResearchDev
@@ -58,4 +58,4 @@ website: ""
 
 Hi! I am a research assistant in Shanghai Qizhi Institute, working with Prof. Tao Du. Currently my research interest lies in computer graphics, especially in the topic of physically-based simulation. I am curious about the relationship of simulation and geometry representation.
 
-Before that, I received my M.E. in computer science from Nankai University, advised by Pro. Bo Ren. I received my B.E. in Process equipment and control engineering from South China University of Technology.
+Before that, I received my M.E. in computer science from Nankai University, advised by Prof. Bo Ren. I received my B.E. in Process equipment and control engineering from South China University of Technology.
