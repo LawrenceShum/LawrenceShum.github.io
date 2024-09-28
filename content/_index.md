@@ -29,5 +29,5 @@ sections:
         folders:
           - publication
     design:
-      view: compact
+      view: citation
 ---

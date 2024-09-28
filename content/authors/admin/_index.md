@@ -64,7 +64,7 @@ work:
     company_url: 'https://www.mihoyo.com/'
     location: Shanghai, China
     date_start: '2023-06-01'
-    date_end: '2023-9-01'
+    date_end: '2023-09-01'
     #description: Researched and developed generative adversarial networks (GAN) for Toutiao, analyzed millions of training images, and significantly improved model performance
 
 education:
