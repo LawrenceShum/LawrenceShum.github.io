@@ -5,7 +5,10 @@ main:
   - name: Home
     url: /
     weight: 10
-  - name: Topics
-    url: /#papers
+  - name: Experience
+    url: /#experience
     weight: 20
+  - name: Publications
+    url: /#papers
+    weight: 30
 

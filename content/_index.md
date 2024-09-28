@@ -12,10 +12,17 @@ sections:
         padding: [0, 0, 0, 0]
       biography:
         style: 'text-align: justify; font-size: 0.8em;'
+  - block: Experience
+    id: experience
+    content:
+      title: Experience
+      filters:
+        folders:
+          - experience
   - block: collection
     id: papers
     content:
-      title: Publication
+      title: Publications
       filters:
         folders:
           - publication

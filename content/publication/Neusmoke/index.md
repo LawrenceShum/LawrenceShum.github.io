@@ -1,11 +1,15 @@
 ---
-title: "Layer-based Simulation for Three-Dimensional Fluid Flow in Spherical Coordinates"
+title: "NeuSmoke: Efficient Smoke Reconstruction and View Synthesis with Neural Transportation Fields"
 
 # Authors
 # If you created a profile for a user (e.g. the default `admin` user), write the username (folder name) here 
 # and it will be replaced with their full name and linked to their profile.
 authors:
+- Jiaxiong Qiu
 - admin
+- Zhong Li
+- Han Yan
+- Ming-Ming Cheng
 - Bo Ren
 
 # Author notes (optional)
@@ -13,26 +17,26 @@ authors:
 # - "Equal contribution"
 # - "Equal contribution"
 
-date: "2024-01-07T00:00:00Z"
-doi: "10.1109/TVCG.2024.3360521"
+date: "2024-12-03T00:00:00Z"
+#doi: "10.1109/TVCG.2024.3360521"
 
 # Schedule page publish date (NOT publication's date).
-publishDate: "2021-01-01T00:00:00Z"
+publishDate: "2024-12-13T00:00:00Z"
 
 # Publication type.
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
 # 3 = Preprint / Working Paper; 4 = Report; 5 = Book; 6 = Book section;
 # 7 = Thesis; 8 = Patent
-publication_types: ["2"]
+publication_types: ["1"]
 
 # Publication name and optional abbreviated publication name.
-publication: In *IEEE Transactions on Visualization and Computer Graphics*
+publication: In *Siggraph Asia, 2024 (Conference Track)*
 publication_short: ''
 
-abstract: Fluid flows in spherical coordinates have raised the interest of the graphics community in recent years. The majority of existing works focus on 2D manifold flows on a spherical shell, and there are still many unresolved problems for 3D simulations in spherical coordinates, such as boundary conditions for arbitrary obstacles and flexible artistic controls. In this paper, we propose a practical spherical-coordinate simulator for flow motions in 3D domains. Based on a layer-by-layer structure and a boundary-aware pressure solving scheme, we are able to recover horizontal and vertical flow motions in the presence of arbitrary terrain shapes within a spherical shell of finite thickness. Our proposed method straightforwardly builds on the conventions of previous 2D-manifold spherical-coordinate simulations and provides flexible artistic control strategies for art design.
+abstract: Novel view synthesis of smoke scenes presents a challenging problem. Previous neural approaches have suffered from inadequate quality and inefficient training. We introduce NeuSmoke, an efficient framework for dynamic smoke reconstruction using neural transportation fields, enabling high-quality density reconstruction and novel-view synthesis from multi-view videos. Our framework consists of two stages. In the first stage, we design a novel neural fluid field representation, integrating the transport equation with neural transportation fields. This includes adaptive embedding of multiple time stamps to enhance the spatial-temporal consistency of the reconstructed smoke. In the second stage, we combine novel-view color and depth information, employing convolutional neural networks (CNNs) to refine the smoke reconstruction. Our model achieves over 10 times faster than previous physics informed approaches. Extensive experiments demonstrate that our method surpasses existing techniques in novel view synthesis and volume density estimation in real-world and synthetic datasets.
 
 # Summary. An optional shortened abstract.
-summary: We propose a novel 3D fluid simulation algorithm in spherical coordinate.
+summary: We introduce an efficient framework for dynamic smoke reconstruction using neural transportation fields.
 
 tags: []
 
