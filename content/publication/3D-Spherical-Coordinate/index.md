@@ -29,13 +29,7 @@ publication_types: ["2"]
 publication: In *IEEE Transactions on Visualization and Computer Graphics*
 publication_short: ''
 
-abstract: Fluid flows in spherical coordinates have raised the interest of the graphics community in recent years. The majority of
-existing works focus on 2D manifold flows on a spherical shell, and there are still many unresolved problems for 3D simulations in
-spherical coordinates, such as boundary conditions for arbitrary obstacles and flexible artistic controls. In this paper, we propose a
-practical spherical-coordinate simulator for flow motions in 3D domains. Based on a layer-by-layer structure and a boundary-aware
-pressure solving scheme, we are able to recover horizontal and vertical flow motions in the presence of arbitrary terrain shapes within
-a spherical shell of finite thickness. Our proposed method straightforwardly builds on the conventions of previous 2D-manifold
-spherical-coordinate simulations and provides flexible artistic control strategies for art design.
+abstract: Fluid flows in spherical coordinates have raised the interest of the graphics community in recent years. The majority of existing works focus on 2D manifold flows on a spherical shell, and there are still many unresolved problems for 3D simulations in spherical coordinates, such as boundary conditions for arbitrary obstacles and flexible artistic controls. In this paper, we propose a practical spherical-coordinate simulator for flow motions in 3D domains. Based on a layer-by-layer structure and a boundary-aware pressure solving scheme, we are able to recover horizontal and vertical flow motions in the presence of arbitrary terrain shapes within a spherical shell of finite thickness. Our proposed method straightforwardly builds on the conventions of previous 2D-manifold spherical-coordinate simulations and provides flexible artistic control strategies for art design.
 
 # Summary. An optional shortened abstract.
 summary: We propose a novel 3D fluid simulation algorithm in spherical coordinate.
