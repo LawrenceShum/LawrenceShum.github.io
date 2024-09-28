@@ -1,6 +1,6 @@
 ---
 title: Experence
-subtitle:Work & Education
+subtitle: Work & Education
 
 # Date format for experience
 #   Refer to https://wowchemy.com/docs/customization/#date-format
