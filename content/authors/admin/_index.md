@@ -52,6 +52,31 @@ profiles:
 # Highlight the author in author lists? (true/false)
 highlight_name: true
 
+work:
+  - title: Research Assistant
+    company: Shanghai Qizhi Institute
+    location: Shanghai, China
+    date_start: '2024-08-12'
+    date_end:
+    description:
+  - title: R&D Intern in Computer Graphics
+    company: Lumi, miHoYo
+    company_url: 'https://www.mihoyo.com/'
+    location: Shanghai, China
+    date_start: '2023-06-01'
+    date_end: '2023-9-01'
+    #description: Researched and developed generative adversarial networks (GAN) for Toutiao, analyzed millions of training images, and significantly improved model performance
+
+education:
+  - area: PhD Computer Science
+    institution: Nankai University
+    date_start: 2021-09-01
+    date_end: 2024-07-01
+  - area: B.Eng Process equipment and control engineering
+    institution: South China University of Technology
+    date_start: 2017-09-01
+    date_end: 2021-07-01
+
 # Author's website URL
 website: ""
 ---

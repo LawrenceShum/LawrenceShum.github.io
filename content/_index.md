@@ -12,13 +12,15 @@ sections:
         padding: [0, 0, 0, 0]
       biography:
         style: 'text-align: justify; font-size: 0.8em;'
-  - block: Experience
+  - block: experience
     id: experience
     content:
-      title: Experience
-      filters:
-        folders:
-          - experience
+      username: admin
+    design:
+      # Hugo date format
+      date_format: 'January 2006'
+      # Education or Experience section first?
+      is_education_first: false
   - block: collection
     id: papers
     content:
@@ -27,5 +29,5 @@ sections:
         folders:
           - publication
     design:
-      view: citation
+      view: compact
 ---
