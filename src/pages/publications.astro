@@ -1,0 +1,22 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import PublicationItem from '../components/PublicationItem.astro';
+import publications from '../content/publications/publications.json';
+
+const sortedPublications = [...publications].sort((a, b) => b.year - a.year);
+---
+
+<PageLayout
+  title="Publications"
+  intro="Research papers, preprints, and selected academic work."
+>
+  <section class="section">
+    <div class="container list-stack">
+      {
+        sortedPublications.map((publication) => (
+          <PublicationItem publication={publication} />
+        ))
+      }
+    </div>
+  </section>
+</PageLayout>

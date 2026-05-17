@@ -1,0 +1,24 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  intro?: string;
+  narrow?: boolean;
+  noindex?: boolean;
+}
+
+const { title, description, intro, narrow = false, noindex = false } = Astro.props;
+const className = narrow ? 'article-container' : 'container';
+---
+
+<BaseLayout title={title} description={description ?? intro} noindex={noindex}>
+  <section class="page-hero">
+    <div class={className}>
+      <h1>{title}</h1>
+      {intro && <p class="lead">{intro}</p>}
+    </div>
+  </section>
+  <slot />
+</BaseLayout>

@@ -1,0 +1,26 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+
+const projects = Object.values(import.meta.glob('../../content/projects/*.md', { eager: true }))
+  .filter((project) => !project.frontmatter.draft)
+  .sort(
+    (a, b) =>
+      new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime(),
+  );
+---
+
+<PageLayout title="Projects" intro="Research systems, experiments, and technical prototypes.">
+  <section class="section">
+    <div class="container project-grid">
+      {
+        projects.map((project) => (
+          <ProjectCard
+            project={project}
+            slug={project.file.split('/').pop()?.replace(/\.md$/, '')}
+          />
+        ))
+      }
+    </div>
+  </section>
+</PageLayout>

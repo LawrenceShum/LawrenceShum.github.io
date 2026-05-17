@@ -1,0 +1,22 @@
+---
+title: "JVP Trace Estimator"
+description: "A short note on using Jacobian-vector products for trace estimation in differentiable simulation code."
+date: 2026-05-17
+updated: 2026-05-17
+tags: ["differentiable simulation", "trace estimator", "autodiff"]
+draft: false
+noindex: true
+---
+
+This placeholder note sketches how Jacobian-vector products can be used to estimate traces without explicitly materializing dense Jacobians.
+
+$$
+\operatorname{Tr}(J) = \mathbb{E}_z \left[z^\top J z\right]
+$$
+
+```python
+import torch
+
+x = torch.randn(16, 3)
+print(x.shape)
+```

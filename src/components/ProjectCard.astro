@@ -1,0 +1,20 @@
+---
+const { project, slug } = Astro.props;
+const links = Object.entries(project.frontmatter.links ?? {}).filter(([, href]) => href);
+---
+
+<article class="project-card">
+  <h3><a href={`/projects/${slug}/`}>{project.frontmatter.title}</a></h3>
+  <p class="summary">{project.frontmatter.description}</p>
+  <p class="meta">{project.frontmatter.status}</p>
+  {project.frontmatter.tags?.length > 0 && (
+    <div class="tag-row">
+      {project.frontmatter.tags.map((tag: string) => <span class="tag">{tag}</span>)}
+    </div>
+  )}
+  {links.length > 0 && (
+    <div class="item-links">
+      {links.map(([label, href]) => <a href={href as string}>{label}</a>)}
+    </div>
+  )}
+</article>

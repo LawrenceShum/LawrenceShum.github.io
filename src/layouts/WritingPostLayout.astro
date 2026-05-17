@@ -1,0 +1,35 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  date: Date | string;
+  updated?: Date | string;
+  tags?: string[];
+}
+
+const { title, description, date, updated, tags = [] } = Astro.props;
+const formatDate = (value: Date | string) =>
+  new Intl.DateTimeFormat('en', { dateStyle: 'medium' }).format(new Date(value));
+---
+
+<BaseLayout title={title} description={description} noindex>
+  <article class="article-container page-hero">
+    <p class="eyebrow">Writing</p>
+    <h1>{title}</h1>
+    {description && <p class="lead">{description}</p>}
+    <p class="meta">
+      {formatDate(date)}
+      {updated && ` · Updated ${formatDate(updated)}`}
+    </p>
+    {tags.length > 0 && (
+      <div class="tag-row" aria-label="Tags">
+        {tags.map((tag) => <span class="tag">{tag}</span>)}
+      </div>
+    )}
+  </article>
+  <article class="article-container prose">
+    <slot />
+  </article>
+</BaseLayout>

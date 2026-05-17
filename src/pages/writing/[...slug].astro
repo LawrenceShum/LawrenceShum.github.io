@@ -1,0 +1,29 @@
+---
+import WritingPostLayout from '../../layouts/WritingPostLayout.astro';
+
+export async function getStaticPaths() {
+  const posts = Object.values(import.meta.glob('../../content/writing/*.mdx', { eager: true })).filter(
+    (post) => !post.frontmatter.draft,
+  );
+
+  return posts.map((post) => ({
+    params: {
+      slug: post.file.split('/').pop()?.replace(/\.(md|mdx)$/, ''),
+    },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const Content = post.default;
+---
+
+<WritingPostLayout
+  title={post.frontmatter.title}
+  description={post.frontmatter.description}
+  date={post.frontmatter.date}
+  updated={post.frontmatter.updated}
+  tags={post.frontmatter.tags}
+>
+  <Content />
+</WritingPostLayout>

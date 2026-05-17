@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Placeholder Publication Title",
+    "authors": ["Ruihong Cen", "Coauthor A", "Coauthor B"],
+    "venue": "Conference / Journal / Preprint",
+    "year": 2026,
+    "status": "placeholder",
+    "links": {
+      "paper": "",
+      "project": "",
+      "code": "",
+      "bibtex": ""
+    },
+    "summary": "Placeholder entry. Replace with a real publication when details are available.",
+    "selected": true
+  }
+]

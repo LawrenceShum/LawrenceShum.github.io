@@ -1,0 +1,22 @@
+---
+title: "Flow Matching vs Diffusion for Multi-Solution Physics"
+description: "A technical reflection on whether flow-based generative models are suitable for modeling multi-solution equilibria in nonlinear mechanics."
+date: 2026-05-17
+updated: 2026-05-17
+tags: ["flow matching", "diffusion", "physical simulation", "generative AI"]
+draft: false
+noindex: true
+---
+
+This placeholder note compares flow matching and diffusion models as possible tools for representing distributions over physically plausible solutions.
+
+$$
+\frac{d}{dt}\log p_t(\phi_t(x)) = -\nabla \cdot v_t(\phi_t(x))
+$$
+
+```python
+import torch
+
+x = torch.randn(16, 3)
+print(x.shape)
+```

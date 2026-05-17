@@ -1,0 +1,41 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+
+const posts = Object.values(import.meta.glob('../../content/writing/*.mdx', { eager: true }))
+  .filter((post) => !post.frontmatter.draft)
+  .sort(
+    (a, b) =>
+      new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime(),
+  );
+
+const formatDate = (value: Date | string) =>
+  new Intl.DateTimeFormat('en', { dateStyle: 'medium' }).format(new Date(value));
+---
+
+<PageLayout
+  title="Writing"
+  intro="Technical notes, research thoughts, and informal essays."
+  noindex
+  narrow
+>
+  <section class="section article-container list-stack">
+    {
+      posts.map((post) => (
+        <article class="writing-card">
+          <h3>
+            <a href={`/writing/${post.file.split('/').pop()?.replace(/\.(md|mdx)$/, '')}/`}>
+              {post.frontmatter.title}
+            </a>
+          </h3>
+          <p class="meta">{formatDate(post.frontmatter.date)}</p>
+          <p class="summary">{post.frontmatter.description}</p>
+          {post.frontmatter.tags?.length > 0 && (
+            <div class="tag-row">
+              {post.frontmatter.tags.map((tag: string) => <span class="tag">{tag}</span>)}
+            </div>
+          )}
+        </article>
+      ))
+    }
+  </section>
+</PageLayout>

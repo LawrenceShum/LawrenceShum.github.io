@@ -1,0 +1,39 @@
+---
+interface Publication {
+  title: string;
+  authors: string[];
+  venue: string;
+  year: number;
+  status?: string;
+  links?: Record<string, string>;
+  summary?: string;
+  selected?: boolean;
+}
+
+const { publication } = Astro.props as { publication: Publication };
+const links = Object.entries(publication.links ?? {}).filter(([, href]) => href);
+---
+
+<article class:list={['publication', { selected: publication.selected }]}>
+  <h3>{publication.title}</h3>
+  <p class="authors">
+    {
+      publication.authors.map((author, index) => (
+        <>
+          {author === 'Ruihong Cen' ? <strong>{author}</strong> : author}
+          {index < publication.authors.length - 1 ? ', ' : ''}
+        </>
+      ))
+    }
+  </p>
+  <p class="meta">
+    {publication.venue} · {publication.year}
+    {publication.status && ` · ${publication.status}`}
+  </p>
+  {publication.summary && <p class="summary">{publication.summary}</p>}
+  {links.length > 0 && (
+    <div class="item-links">
+      {links.map(([label, href]) => <a href={href}>{label}</a>)}
+    </div>
+  )}
+</article>
